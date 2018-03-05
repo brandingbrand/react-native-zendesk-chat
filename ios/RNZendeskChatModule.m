@@ -13,6 +13,10 @@
 
 RCT_EXPORT_MODULE(RNZendeskChatModule);
 
+RCT_EXPORT_METHOD(initializeWithAccountKey:(nonnull NSString *)accountKey) {
+  [ZDCChat initializeWithAccountKey:accountKey];
+}
+
 RCT_EXPORT_METHOD(setVisitorInfo:(NSDictionary *)options) {
   [ZDCChat updateVisitor:^(ZDCVisitorInfo *visitor) {
     if (options[@"name"]) {
