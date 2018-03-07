@@ -13,7 +13,7 @@
 
 RCT_EXPORT_MODULE(RNZendeskChatModule);
 
-RCT_EXPORT_METHOD(initializeWithAccountKey:(nonnull NSString *)accountKey) {
+RCT_EXPORT_METHOD(init:(nonnull NSString *)accountKey) {
   dispatch_sync(dispatch_get_main_queue(), ^{
     [ZDCChat initializeWithAccountKey:accountKey];
   });
